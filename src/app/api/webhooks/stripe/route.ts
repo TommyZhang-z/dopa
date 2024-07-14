@@ -6,12 +6,6 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string, {
   apiVersion: "2024-06-20",
 });
 
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
-
 const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET as string;
 
 type Metadata = {
